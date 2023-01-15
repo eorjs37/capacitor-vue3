@@ -1,0 +1,6 @@
+{
+  "appId": "com.capacitorvuee.app",
+  "appName": "capacitor-vue-app",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
