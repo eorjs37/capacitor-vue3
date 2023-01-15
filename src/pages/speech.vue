@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { hasPermission, requestPermission, startRecord, stopRecord } from "@/utils/speechReco";
+import { hasPermission, requestPermission, startRecord, stopRecord, returnSpeech } from "@/utils/speechReco";
 import { onMounted, ref } from "@vue/runtime-core";
 export default {
   setup() {
@@ -34,7 +34,12 @@ export default {
 
     const funcStartSpeech = () => {
       startRecord()
-        .then()
+        .then(() => {
+          eventListener();
+          setTimeout(() => {
+            funcStopSpeeech();
+          }, 5000);
+        })
         .catch((error) => {
           console.error("error : ", error);
         });
@@ -46,6 +51,12 @@ export default {
         .catch((error) => {
           console.error("error : ", error);
         });
+    };
+
+    const eventListener = () => {
+      returnSpeech.addListener("partialResults", (data) => {
+        console.log(data);
+      });
     };
 
     onMounted(() => {

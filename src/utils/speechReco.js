@@ -38,4 +38,8 @@ const stopRecord = () => {
   return SpeechRecognition.stop();
 };
 
-export { hasPermission, requestPermission, startRecord, stopRecord };
+const returnSpeech = () => {
+  return SpeechRecognition;
+};
+
+export { hasPermission, requestPermission, startRecord, stopRecord, returnSpeech };
