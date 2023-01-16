@@ -8,5 +8,6 @@ module.exports = defineConfig({
         "@": path.join(__dirname, "src/"),
       },
     },
+    devtool: "source-map",
   },
 });

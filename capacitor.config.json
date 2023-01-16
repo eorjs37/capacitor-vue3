@@ -4,6 +4,8 @@
   "webDir": "dist",
   "bundledWebRuntime": false,
   "server": {
-    "cleartext": true
+    "allowNavigation": ["*"],
+    "androidScheme": "http",
+    "hostname": "localhost"
   }
 }
