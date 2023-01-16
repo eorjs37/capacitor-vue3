@@ -6,6 +6,7 @@
   "server": {
     "allowNavigation": ["*"],
     "androidScheme": "http",
-    "hostname": "localhost"
+    "hostname": "localhost",
+    "cleartext": true
   }
 }
